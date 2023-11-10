@@ -1,6 +1,6 @@
-function NextButton({ handleSelectAnwer, children }) {
+function NextButton({ action, children }) {
   return (
-    <button className="btn btn-ui" onClick={handleSelectAnwer}>
+    <button className="btn btn-ui" onClick={action}>
       {children}
     </button>
   );

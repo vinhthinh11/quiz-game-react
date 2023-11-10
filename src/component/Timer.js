@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
-function Timer({ dispatch, timeToAnswer }) {
+import { useQuizz } from './context/QuizzContext';
+function Timer() {
+  const { dispatch, timeToAnswer } = useQuizz();
   //follow jonas, let make useEffect at here, though I think that we can manage it at app component 😕😕
   useEffect(
     function () {

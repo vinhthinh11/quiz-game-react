@@ -1,14 +1,11 @@
 import { Option } from './Option';
-function Questions({ questions, handleSelectAnwer, handleAnswer, answer }) {
+import { useQuizz } from './context/QuizzContext';
+function Questions() {
+  const { questions, index } = useQuizz();
   return (
     <div>
-      <h4 className=""> {questions.question}</h4>
-      <Option
-        question={questions}
-        onNext={handleSelectAnwer}
-        handleAnswer={handleAnswer}
-        answer={answer}
-      />
+      <h4 className=""> {questions[index].question}</h4>
+      <Option />
     </div>
   );
 }
